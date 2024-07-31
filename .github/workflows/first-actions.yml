@@ -1,7 +1,12 @@
-name: My First GitHub Actions
+name: Deploy WiTT2 to ECR (dev)
+on:
+  push:
+    branches: [main]
 
-on: [push]
-
+permissions:
+  id-token: write
+  contents: read
+  
 jobs:
   build:
     runs-on: ubuntu-latest
